@@ -27,10 +27,6 @@ function Register() {
       setError("Barcha maydonlarni to'ldiring");
       return;
     }
-    if (passwordRef !== rePasswordRef) {
-      setError("Parollar mos kelmadi");
-      return;
-    }
     const userInfo = {
       username: nameRef.current.value,
       email: emailRef.current.value,
@@ -43,6 +39,11 @@ function Register() {
       },
       body: JSON.stringify(userInfo)
     })
+    .then(res=>res.json())
+    .then(data =>{
+      navigate("/singin")
+    })
+    .catch(err => console.log(err))
   }
   return (
     <div className="container w-100 mt-5">
