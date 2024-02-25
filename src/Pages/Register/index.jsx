@@ -1,4 +1,4 @@
-import React, { memo, useRef } from 'react'
+import React, { useRef } from 'react'
 import GoogleLogin from 'react-google-login'
 import { useNavigate } from 'react-router-dom';
 
