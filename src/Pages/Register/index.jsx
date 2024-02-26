@@ -14,7 +14,7 @@ function Register() {
   const navigate = useNavigate()
   function responseGoogle(response) {
     console.log('Google login successful', response);
-    navigate("/")
+    navigate("/home")
   }
   
   function responseGoogleFailure(error) {

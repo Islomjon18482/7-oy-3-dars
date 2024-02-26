@@ -28,7 +28,7 @@ function Register() {
     })
     .then(res=>res.json())
     .then(data =>{
-      navigate("/")
+      navigate("/home")
     })
     .catch(err => console.log(err))
   }
